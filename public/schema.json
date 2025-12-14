@@ -3,9 +3,9 @@
     "@type": "Organization",
     "name": "Incubia Algérie",
     "description": "Incubateur et accélérateur de startups en Algérie. Accompagnement, formations, et services pour entrepreneurs.",
-    "url": "https://incuba-dz.com",
-    "logo": "https://incuba-dz.com/logo.png",
-    "image": "https://incuba-dz.com/og-image.jpg",
+    "url": "https://incubia-algerie-v0.vercel.app",
+    "logo": "https://incubia-algerie-v0.vercel.app/logo.png",
+    "image": "https://incubia-algerie-v0.vercel.app/og-image.jpg",
     "telephone": "+213-XX-XX-XX-XX",
     "email": "contact@incuba-dz.com",
     "address": {

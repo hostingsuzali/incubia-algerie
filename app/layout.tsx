@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://incuba-dz.com'), // Replace with your actual domain
+  metadataBase: new URL('https://incubia-algerie-v0.vercel.app'), // Replace with your actual domain
   title: {
     default: "Incubia Algérie — Incubateur & Accélérateur de Startups",
     template: "%s | Incubia Algérie",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_DZ",
-    url: "https://incuba-dz.com",
+    url: "https://incubia-algerie-v0.vercel.app",
     siteName: "Incubia Algérie",
     title: "Incubia Algérie — Incubateur & Accélérateur de Startups",
     description:
@@ -120,8 +120,8 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Incubia Algérie",
               "description": "Incubateur et accélérateur de startups en Algérie",
-              "url": "https://incuba-dz.com",
-              "logo": "https://incuba-dz.com/logo.png",
+              "url": "https://incubia-algerie-v0.vercel.app",
+              "logo": "https://incubia-algerie-v0.vercel.app/logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+213-XX-XX-XX-XX",

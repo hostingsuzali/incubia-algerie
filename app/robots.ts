@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: ['/api/', '/admin/'],
             },
         ],
-        sitemap: 'https://incuba-dz.com/sitemap.xml', // Replace with your actual domain
+        sitemap: 'https://incubia-algerie-v0.vercel.app/sitemap.xml', // Replace with your actual domain
     }
 }

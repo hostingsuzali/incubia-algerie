@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://incuba-dz.com' // Replace with your actual domain
+    const baseUrl = 'https://incubia-algerie-v0.vercel.app' // Replace with your actual domain
 
     return [
         {
