@@ -1,0 +1,65 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Incubia Algérie",
+    "description": "Incubateur et accélérateur de startups en Algérie. Accompagnement, formations, et services pour entrepreneurs.",
+    "url": "https://incuba-dz.com",
+    "logo": "https://incuba-dz.com/logo.png",
+    "image": "https://incuba-dz.com/og-image.jpg",
+    "telephone": "+213-XX-XX-XX-XX",
+    "email": "contact@incuba-dz.com",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Alger",
+        "addressLocality": "Alger",
+        "addressCountry": "DZ"
+    },
+    "sameAs": [
+        "https://facebook.com/incubia",
+        "https://twitter.com/incubia",
+        "https://linkedin.com/company/incubia",
+        "https://instagram.com/incubia"
+    ],
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+213-XX-XX-XX-XX",
+        "contactType": "Customer Service",
+        "areaServed": "DZ",
+        "availableLanguage": [
+            "French",
+            "Arabic"
+        ]
+    },
+    "offers": [
+        {
+            "@type": "Offer",
+            "name": "Programme d'Incubation",
+            "description": "Accompagnement de 6 mois pour startups en phase d'idéation",
+            "category": "Incubation"
+        },
+        {
+            "@type": "Offer",
+            "name": "Programme d'Accélération",
+            "description": "Accélération de 3 mois pour startups en croissance",
+            "category": "Acceleration"
+        },
+        {
+            "@type": "Offer",
+            "name": "Formations Entrepreneuriales",
+            "description": "30+ formations certifiantes en Marketing, Finance, Leadership, Tech",
+            "category": "Training"
+        },
+        {
+            "@type": "Offer",
+            "name": "MVP Building",
+            "description": "Développement de produit minimum viable en 4-8 semaines",
+            "category": "Development"
+        },
+        {
+            "@type": "Offer",
+            "name": "SaaS Platform Building",
+            "description": "Construction de plateforme SaaS complète",
+            "category": "Development"
+        }
+    ]
+}

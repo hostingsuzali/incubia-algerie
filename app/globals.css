@@ -3,101 +3,132 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Updated theme to match HelloWork aesthetic - soft pastels, friendly colors */
+/* Design System Tokens - Complete Migration */
 :root {
-  /* Soft warm background */
-  --background: oklch(0.99 0.005 80);
-  /* Dark text for contrast */
-  --foreground: oklch(0.2 0.01 260);
+  /* Brand Color Palette - Strict System */
+  --c-primary-mint: #cdd2ed;
+  --c-primary-dark-mint: #97aad2;
+  --c-primary-deep: #0825a3;
+  --c-accent: #F4C06B;
+  --c-text-primary: #0D1F1A;
+  --c-text-secondary: #47534E;
+  --c-border-neutral: #E7EBE9;
+  --c-surface: #F9FAF9;
+  --c-white: #FFFFFF;
+  --c-error: #D64545;
+  --c-success: #2F9D69;
 
-  /* Card with slight warmth */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.01 260);
+  /* Semantic Colors */
+  --background: var(--c-surface);
+  --foreground: var(--c-text-primary);
+  --card: var(--c-white);
+  --card-foreground: var(--c-text-primary);
+  --popover: var(--c-white);
+  --popover-foreground: var(--c-text-primary);
+  --primary: var(--c-primary-deep);
+  --primary-foreground: var(--c-white);
+  --secondary: var(--c-primary-mint);
+  --secondary-foreground: var(--c-primary-deep);
+  --muted: var(--c-border-neutral);
+  --muted-foreground: var(--c-text-secondary);
+  --accent: var(--c-accent);
+  --accent-foreground: var(--c-text-primary);
+  --destructive: var(--c-error);
+  --destructive-foreground: var(--c-white);
+  --border: var(--c-border-neutral);
+  --input: var(--c-white);
+  --ring: var(--c-primary-dark-mint);
 
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.01 260);
+  /* Spacing System (8pt grid) */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
 
-  /* Deep blue/black primary for CTAs - like HelloWork's dark buttons */
-  --primary: oklch(0.2 0.02 260);
-  --primary-foreground: oklch(0.99 0 0);
+  /* Typography Scale */
+  --fs-h1: 3rem; /* 48px */
+  --lh-h1: 3.5rem; /* 56px */
+  --fs-h2: 1.75rem; /* 28px */
+  --lh-h2: 2.25rem; /* 36px */
+  --fs-h3: 1.25rem; /* 20px */
+  --lh-h3: 1.75rem; /* 28px */
+  --fs-body: 1rem; /* 16px */
+  --lh-body: 1.5rem; /* 24px */
+  --fs-sm: 0.875rem; /* 14px */
+  --lh-sm: 1.25rem; /* 20px */
 
-  /* Soft green accent */
-  --secondary: oklch(0.7 0.12 150);
-  --secondary-foreground: oklch(0.2 0.01 260);
+  /* Border Radius */
+  --r-xs: 6px;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 24px;
+  --r-pill: 9999px;
+  --radius: var(--r-sm);
 
-  /* Lavender/purple muted */
-  --muted: oklch(0.95 0.02 280);
-  --muted-foreground: oklch(0.5 0.02 260);
+  /* Elevation & Shadows */
+  --elevation-1: 0 6px 18px rgba(12, 97, 88, 0.06);
+  --elevation-2: 0 12px 36px rgba(12, 97, 88, 0.08);
+  --elevation-3: 0 20px 60px rgba(12, 97, 88, 0.10);
 
-  /* Warm peach/orange accent */
-  --accent: oklch(0.8 0.08 60);
-  --accent-foreground: oklch(0.2 0.01 260);
+  /* Chart Colors */
+  --chart-1: var(--c-primary-dark-mint);
+  --chart-2: var(--c-primary-mint);
+  --chart-3: var(--c-accent);
+  --chart-4: var(--c-text-secondary);
+  --chart-5: var(--c-success);
 
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.99 0 0);
-
-  /* Very soft borders */
-  --border: oklch(0.92 0.01 90);
-  --input: oklch(0.94 0.01 90);
-  --ring: oklch(0.7 0.12 150);
-
-  /* Pastel chart colors */
-  --chart-1: oklch(0.7 0.12 150);
-  --chart-2: oklch(0.75 0.1 200);
-  --chart-3: oklch(0.8 0.08 60);
-  --chart-4: oklch(0.72 0.1 280);
-  --chart-5: oklch(0.75 0.08 40);
-
-  /* Increased radius for softer, more rounded look like HelloWork */
-  --radius: 1.25rem;
-
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.2 0.02 260);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  /* Sidebar */
+  --sidebar: var(--c-white);
+  --sidebar-foreground: var(--c-text-primary);
+  --sidebar-primary: var(--c-primary-deep);
+  --sidebar-primary-foreground: var(--c-white);
+  --sidebar-accent: var(--c-primary-mint);
+  --sidebar-accent-foreground: var(--c-primary-deep);
+  --sidebar-border: var(--c-border-neutral);
+  --sidebar-ring: var(--c-primary-dark-mint);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --background: #0D1F1A;
+  --foreground: #F9FAF9;
+  --card: #0D1F1A;
+  --card-foreground: #F9FAF9;
+  --popover: #0D1F1A;
+  --popover-foreground: #F9FAF9;
+  --primary: var(--c-primary-mint);
+  --primary-foreground: var(--c-primary-deep);
+  --secondary: var(--c-primary-dark-mint);
+  --secondary-foreground: var(--c-white);
+  --muted: #47534E;
+  --muted-foreground: #E7EBE9;
+  --accent: var(--c-accent);
+  --accent-foreground: var(--c-text-primary);
+  --destructive: var(--c-error);
+  --destructive-foreground: var(--c-white);
+  --border: #47534E;
+  --input: #0D1F1A;
+  --ring: var(--c-primary-dark-mint);
+  --chart-1: var(--c-primary-dark-mint);
+  --chart-2: var(--c-primary-mint);
+  --chart-3: var(--c-accent);
+  --chart-4: #47534E;
+  --chart-5: var(--c-success);
+  --sidebar: #0D1F1A;
+  --sidebar-foreground: #F9FAF9;
+  --sidebar-primary: var(--c-primary-dark-mint);
+  --sidebar-primary-foreground: var(--c-white);
+  --sidebar-accent: #47534E;
+  --sidebar-accent-foreground: #F9FAF9;
+  --sidebar-border: #47534E;
+  --sidebar-ring: var(--c-primary-dark-mint);
 }
 
 @theme inline {
-  --font-sans: "Inter", "Inter Fallback";
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -123,10 +154,10 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-sm: var(--r-sm);
+  --radius-md: var(--r-md);
+  --radius-lg: var(--r-lg);
+  --radius-xl: var(--r-lg);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -136,19 +167,27 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Add custom pastel background colors like HelloWork */
-  --color-lavender-bg: oklch(0.96 0.03 280);
-  --color-mint-bg: oklch(0.96 0.04 150);
-  --color-cyan-bg: oklch(0.96 0.03 200);
-  --color-peach-bg: oklch(0.96 0.03 60);
-  --color-cream-bg: oklch(0.98 0.01 80);
+  /* Design System Color Tokens */
+  --color-primary-mint: var(--c-primary-mint);
+  --color-primary-dark-mint: var(--c-primary-dark-mint);
+  --color-primary-deep: var(--c-primary-deep);
+  --color-accent: var(--c-accent);
+  --color-text-primary: var(--c-text-primary);
+  --color-text-secondary: var(--c-text-secondary);
+  --color-border-neutral: var(--c-border-neutral);
+  --color-surface: var(--c-surface);
+  --color-error: var(--c-error);
+  --color-success: var(--c-success);
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground tracking-tight;
   }
 }

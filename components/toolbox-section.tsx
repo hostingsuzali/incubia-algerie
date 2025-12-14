@@ -54,39 +54,44 @@ export function ToolboxSection() {
       title: "Documentation téléchargeable",
       description: "Templates, guides et ressources à télécharger gratuitement.",
     },
+    {
+      icon: Building2,
+      title: "Accès partenaires financiers",
+      description: "Mise en relation avec investisseurs et institutions financières.",
+    },
   ]
 
   return (
-    <section id="services" className="py-24 lg:py-32" style={{ backgroundColor: "oklch(0.96 0.03 200)" }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/60 text-foreground text-sm font-medium mb-6">
+    <section id="services" className="py-24 bg-[#CDEDE4]">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
+        <div className="text-center max-w-4xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/60 text-[#0C6158] text-sm font-medium mb-6">
             Boîte à outils
           </div>
-          <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-            Tous les services pour réussir
+          <h2 className="text-3xl lg:text-5xl font-bold text-[#0D1F1A] text-balance">
+            La boîte à outils des entrepreneurs
           </h2>
-          <p className="text-lg text-foreground/70 leading-relaxed">
+          <p className="text-lg text-[#47534E] leading-relaxed mt-2">
             Des outils et services concrets pour chaque étape de votre parcours entrepreneurial.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group border-0 bg-white shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 rounded-3xl"
+              className="group border border-[#E7EBE9] bg-white shadow-[0_6px_18px_rgba(12,97,88,0.06)] hover:shadow-[0_12px_36px_rgba(12,97,88,0.08)] hover:-translate-y-1 transition-all duration-320 rounded-[24px]"
             >
-              <CardContent className="p-8">
-                <div className="w-14 h-14 rounded-2xl bg-secondary/20 flex items-center justify-center mb-5 group-hover:bg-secondary/30 transition-colors">
-                  <service.icon className="w-7 h-7 text-secondary" />
+              <CardContent className="p-6">
+                <div className="w-14 h-14 rounded-2xl bg-[#CDEDE4] flex items-center justify-center mb-6 group-hover:bg-[#CDEDE4]/80 transition-colors">
+                  <service.icon className="w-7 h-7 text-[#0C6158]" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-3">{service.title}</h3>
-                <p className="text-sm text-foreground/70 leading-relaxed mb-4">{service.description}</p>
+                <h3 className="text-lg font-bold text-[#0D1F1A] mb-2">{service.title}</h3>
+                <p className="text-sm text-[#47534E] leading-relaxed mb-6">{service.description}</p>
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="p-0 h-auto text-foreground hover:text-foreground/70 font-medium"
+                  className="p-0 h-auto text-[#0C6158] hover:text-[#0C6158]/70 font-medium"
                 >
                   Voir le service
                   <ArrowRight className="w-4 h-4 ml-1" />
