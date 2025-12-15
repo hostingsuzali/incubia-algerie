@@ -51,7 +51,7 @@ export function WhyIncuba() {
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0D1F1A] tracking-tight mb-6 text-balance">
                         Pourquoi Choisir{" "}
                         <span className="bg-gradient-to-r from-[#1B1AFE] to-[#CA9BFA] bg-clip-text text-transparent">
-                            Incuba-DZ
+                            Incubia Algerie
                         </span>{" "}
                         ?
                     </h2>
