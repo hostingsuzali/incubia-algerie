@@ -3,6 +3,21 @@ const nextConfig = {
     // Security Headers
     async headers() {
         return [
+            // Sanity Studio routes - less restrictive headers
+            {
+                source: '/studio/:path*',
+                headers: [
+                    {
+                        key: 'X-Content-Type-Options',
+                        value: 'nosniff',
+                    },
+                    {
+                        key: 'Referrer-Policy',
+                        value: 'origin-when-cross-origin',
+                    },
+                ],
+            },
+            // All other routes - full security headers
             {
                 source: '/:path*',
                 headers: [
@@ -41,11 +56,11 @@ const nextConfig = {
                         key: 'Content-Security-Policy',
                         value: [
                             "default-src 'self'",
-                            "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://va.vercel-scripts.com",
-                            "style-src 'self' 'unsafe-inline'",
+                            "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://va.vercel-scripts.com https://cdn.sanity.io",
+                            "style-src 'self' 'unsafe-inline' https://cdn.sanity.io",
                             "img-src 'self' data: https: blob:",
-                            "font-src 'self' data:",
-                            "connect-src 'self' https://www.google-analytics.com https://vitals.vercel-insights.com",
+                            "font-src 'self' data: https://cdn.sanity.io",
+                            "connect-src 'self' https://www.google-analytics.com https://vitals.vercel-insights.com https://*.sanity.io https://*.api.sanity.io",
                             "frame-ancestors 'none'",
                         ].join('; '),
                     },

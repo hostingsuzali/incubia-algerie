@@ -11,136 +11,142 @@ export function FormationsDetail() {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, margin: "-100px" })
 
-    const formations = [
+    const defaultFormations: any[] = [
         {
-            id: "fondamentaux",
-            title: "Business Model Canvas en Action",
-            category: "Fondamentaux Startup",
-            forWho: "Porteurs de projet en phase d'idéation ou pré-MVP",
-            prerequisites: "Aucun",
-            results: [
-                "Construire un business model validé",
-                "Identifier vos segments clients prioritaires",
-                "Définir une proposition de valeur claire",
-                "Structurer votre plan d'action MVP",
-            ],
-            format: "Présentiel",
-            duration: "2 jours (14h)",
-            rhythm: "Weekend intensif",
-            instructor: {
-                name: "Karim Benali",
-                role: "Ex-CEO TechCorp, 3 exits réussies",
-                experience: "15 ans en tech, accompagné 50+ startups",
-            },
-            color: "from-[#059669] to-[#10B981]",
-        },
-        {
-            id: "produit",
-            title: "MVP: De l'Idée au Test Utilisateur",
-            category: "Produit & MVP",
-            forWho: "Fondateurs avec une idée validée, prêts à construire",
-            prerequisites: "Business model défini",
-            results: [
-                "Définir votre MVP minimum viable",
-                "Conduire des tests utilisateurs efficaces",
-                "Itérer rapidement sur les retours",
-                "Prioriser les fonctionnalités critiques",
-            ],
-            format: "Hybride",
-            duration: "3 semaines (12h)",
-            rhythm: "2h/semaine + travail autonome",
-            instructor: {
-                name: "Amira Hadj",
-                role: "Founder EduTech DZ, 50k+ utilisateurs",
-                experience: "Product Manager chez 3 scale-ups",
-            },
-            color: "from-[#1B1AFE] to-[#4B4AFF]",
-        },
-        {
-            id: "commercial",
-            title: "Stratégie Commerciale & Pipeline de Vente",
-            category: "Développement Commercial",
-            forWho: "Startups avec MVP lancé, cherchant à acquérir clients",
-            prerequisites: "Produit fonctionnel",
-            results: [
-                "Structurer un pipeline de vente B2B/B2C",
-                "Définir votre stratégie d'acquisition",
-                "Maîtriser les techniques de closing",
-                "Optimiser votre pricing et go-to-market",
-            ],
-            format: "Présentiel",
-            duration: "3 jours (21h)",
-            rhythm: "Intensif sur 1 semaine",
-            instructor: {
-                name: "Youcef Mansouri",
-                role: "VP Sales, 10M€ de deals signés",
-                experience: "20 ans en vente B2B et développement commercial",
-            },
-            color: "from-[#CA9BFA] to-[#E9D5FF]",
-        },
-        {
-            id: "management",
-            title: "Leadership Fondateur & Management d'Équipe",
-            category: "Management & Organisation",
-            forWho: "Fondateurs gérant une équipe de 3+ personnes",
-            prerequisites: "Équipe constituée",
-            results: [
-                "Manager une équipe startup efficacement",
-                "Déléguer et prioriser stratégiquement",
-                "Structurer des process internes",
-                "Gérer les conflits et la croissance",
-            ],
-            format: "En ligne",
-            duration: "4 semaines (16h)",
-            rhythm: "1 session/semaine + coaching",
-            instructor: {
-                name: "Sarah Khelifi",
-                role: "COO, scalé 3 startups de 5 à 50 personnes",
-                experience: "Ex-McKinsey, spécialiste organisation",
-            },
-            color: "from-[#0284C7] to-[#0EA5E9]",
-        },
-        {
-            id: "juridique",
-            title: "Création d'Entreprise en Algérie: Guide Complet",
-            category: "Juridique & Administratif",
-            forWho: "Porteurs de projet prêts à créer leur structure",
+            id: "creation-algerie",
+            title: "Créer une Entreprise en Algérie (sans blocages)",
+            category: "Création & Structuration",
+            forWho: "Porteurs de projet prêts à créer leur structure juridique",
             prerequisites: "Projet défini",
+            pricing: "30 000 DZD",
             results: [
-                "Choisir la bonne forme juridique (SPA, SARL, EURL)",
-                "Monter un dossier Label Startup complet",
-                "Comprendre le cadre réglementaire algérien",
-                "Éviter les erreurs juridiques coûteuses",
+                "Choisir la bonne forme juridique (EURL, SARL, SPA)",
+                "Monter un dossier complet sans erreurs",
+                "Comprendre le Label Startup et ses avantages",
+                "Éviter les blocages administratifs coûteux",
             ],
             format: "Présentiel",
             duration: "1 jour (7h)",
             rhythm: "Journée intensive",
             instructor: {
-                name: "Maître Farid Bouazza",
-                role: "Avocat d'affaires, spécialiste startups",
-                experience: "100+ créations accompagnées",
+                name: "Mohamed Ben",
+                role: "Expert juridique & comptable",
+                experience: "Spécialiste droit des affaires en Algérie",
+            },
+            color: "from-[#059669] to-[#10B981]",
+        },
+        {
+            id: "financement-local",
+            title: "Financer son Projet Localement",
+            category: "Financement & Dispositifs",
+            forWho: "Entrepreneurs cherchant un financement ANSEJ, CNAC, ou ANDI",
+            prerequisites: "Projet structuré",
+            pricing: "55 000 DZD",
+            results: [
+                "Monter un dossier ANSEJ/CNAC complet et conforme",
+                "Maximiser vos chances d'acceptation",
+                "Comprendre les critères d'éligibilité réels",
+                "Éviter les erreurs qui font rejeter 60% des dossiers",
+            ],
+            format: "Présentiel",
+            duration: "2 jours (14h)",
+            rhythm: "Weekend intensif",
+            instructor: {
+                name: "Radia Diffalah",
+                role: "Experte incubation & financement",
+                experience: "Accompagné 100+ dossiers de financement",
+            },
+            color: "from-[#1B1AFE] to-[#4B4AFF]",
+        },
+        {
+            id: "vente-b2b-algerie",
+            title: "Vendre en B2B en Algérie",
+            category: "Développement Commercial",
+            forWho: "Startups B2B cherchant à acquérir leurs premiers clients",
+            prerequisites: "Offre définie",
+            pricing: "65 000 DZD",
+            results: [
+                "Prospecter efficacement en contexte algérien",
+                "Structurer votre approche commerciale B2B",
+                "Gérer les cycles de vente longs et les décideurs",
+                "Éviter les erreurs de pricing et de positionnement",
+            ],
+            format: "Présentiel",
+            duration: "3 jours (21h)",
+            rhythm: "Intensif sur 1 semaine",
+            instructor: {
+                name: "Hichem Hammouche",
+                role: "Expert développement commercial B2B",
+                experience: "15+ ans en vente B2B, secteurs variés",
+            },
+            color: "from-[#CA9BFA] to-[#E9D5FF]",
+        },
+        {
+            id: "structurer-startup",
+            title: "Structurer une Startup Early-Stage",
+            category: "Management & Organisation",
+            forWho: "Fondateurs gérant une équipe de 2-10 personnes",
+            prerequisites: "Équipe constituée",
+            pricing: "55 000 DZD",
+            results: [
+                "Organiser votre équipe et définir les rôles",
+                "Mettre en place des process simples et efficaces",
+                "Gérer les priorités et éviter la dispersion",
+                "Éviter les erreurs d'organisation qui ralentissent",
+            ],
+            format: "Hybride",
+            duration: "2 jours (14h)",
+            rhythm: "2 sessions + suivi",
+            instructor: {
+                name: "Amine Hallab",
+                role: "Expert management & structuration",
+                experience: "Accompagné 30+ startups en phase early-stage",
+            },
+            color: "from-[#0284C7] to-[#0EA5E9]",
+        },
+        {
+            id: "pitch-evenementiel",
+            title: "Pitcher et Présenter son Projet",
+            category: "Communication & Événementiel",
+            forWho: "Fondateurs préparant un pitch, concours, ou événement",
+            prerequisites: "Projet lancé",
+            pricing: "40 000 DZD",
+            results: [
+                "Construire un pitch clair et impactant",
+                "Présenter devant investisseurs ou jury",
+                "Gérer le stress et les questions difficiles",
+                "Éviter les erreurs qui font perdre l'attention",
+            ],
+            format: "Présentiel",
+            duration: "1 jour (7h)",
+            rhythm: "Journée intensive + simulations",
+            instructor: {
+                name: "Alexandre Mellal",
+                role: "Expert événementiel & pitching",
+                experience: "Organisé 50+ événements startup",
             },
             color: "from-[#7C3AED] to-[#A78BFA]",
         },
         {
-            id: "financement",
-            title: "Pitch Deck & Préparation Investisseurs",
-            category: "Financement & Levée",
-            forWho: "Startups avec traction, préparant une levée",
-            prerequisites: "Métriques clés suivies, clients existants",
+            id: "business-model",
+            title: "Valider son Business Model",
+            category: "Stratégie & Modèle",
+            forWho: "Porteurs de projet en phase de validation",
+            prerequisites: "Idée définie",
+            pricing: "45 000 DZD",
             results: [
-                "Construire un pitch deck qui convertit",
-                "Maîtriser la lecture financière investisseur",
-                "Préparer votre due diligence",
-                "Négocier les termes d'investissement",
+                "Tester votre modèle économique avant de lancer",
+                "Identifier vos segments clients prioritaires",
+                "Définir une proposition de valeur claire",
+                "Éviter de lancer un produit que personne ne veut",
             ],
             format: "Hybride",
-            duration: "2 semaines (10h)",
-            rhythm: "Sessions + simulations pitch",
+            duration: "2 jours (14h)",
+            rhythm: "Weekend + suivi en ligne",
             instructor: {
-                name: "Mehdi Larbi",
-                role: "Angel Investor, 15+ deals",
-                experience: "Ex-VC, levé 50M€ pour ses startups",
+                name: "Radia Diffalah",
+                role: "Experte incubation & transformation",
+                experience: "Accompagné 80+ projets en validation",
             },
             color: "from-[#EA580C] to-[#FB923C]",
         },
@@ -164,7 +170,7 @@ export function FormationsDetail() {
                 </motion.div>
 
                 <div className="space-y-8">
-                    {formations.map((formation, index) => (
+                    {defaultFormations.map((formation, index) => (
                         <motion.div
                             key={formation.id}
                             id={formation.id}
@@ -223,14 +229,27 @@ export function FormationsDetail() {
                                     </div>
 
                                     {/* Instructor */}
-                                    <div>
-                                        <h4 className="font-bold text-[#0D1F1A] mb-3">Intervenant</h4>
-                                        <div className="p-4 rounded-xl bg-[#F9FAF9] border border-[#E7EBE9]">
-                                            <p className="font-bold text-[#0D1F1A] mb-1">{formation.instructor.name}</p>
-                                            <p className="text-sm text-[#1B1AFE] font-semibold mb-2">{formation.instructor.role}</p>
-                                            <p className="text-xs text-[#47534E]">{formation.instructor.experience}</p>
+                                    {formation.instructor && (
+                                        <div>
+                                            <h4 className="font-bold text-[#0D1F1A] mb-3">Intervenant</h4>
+                                            <div className="p-4 rounded-xl bg-[#F9FAF9] border border-[#E7EBE9]">
+                                                <p className="font-bold text-[#0D1F1A] mb-1">{formation.instructor.name}</p>
+                                                <p className="text-sm text-[#1B1AFE] font-semibold mb-2">{formation.instructor.role}</p>
+                                                <p className="text-xs text-[#47534E]">{formation.instructor.experience}</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    )}
+
+                                    {/* Pricing */}
+                                    {formation.pricing && (
+                                        <div>
+                                            <h4 className="font-bold text-[#0D1F1A] mb-3">Tarif</h4>
+                                            <div className="p-4 rounded-xl bg-gradient-to-br from-[#059669]/10 to-[#10B981]/10 border-2 border-[#059669]/20">
+                                                <p className="text-2xl font-bold text-[#059669]">{formation.pricing}</p>
+                                                <p className="text-xs text-[#47534E] mt-1">Formation complète</p>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
 
                                 {/* Right Column - Results */}
@@ -240,7 +259,7 @@ export function FormationsDetail() {
                                         À la fin, vous saurez
                                     </h4>
                                     <div className="space-y-3">
-                                        {formation.results.map((result, idx) => (
+                                        {formation.results.map((result: string, idx: number) => (
                                             <div key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-[#F9FAF9]">
                                                 <CheckCircle2 className="w-5 h-5 text-[#059669] shrink-0 mt-0.5" />
                                                 <span className="text-sm text-[#0D1F1A] font-medium leading-relaxed">{result}</span>
@@ -251,7 +270,7 @@ export function FormationsDetail() {
                             </div>
 
                             {/* CTAs */}
-                            <div className="flex flex-col sm:flex-row gap-3 pt-6 border-t border-[#E7EBE9]">
+                            < div className="flex flex-col sm:flex-row gap-3 pt-6 border-t border-[#E7EBE9]" >
                                 <Button
                                     className={`flex-1 h-12 bg-gradient-to-r ${formation.color} hover:opacity-90 text-white font-semibold rounded-xl`}
                                     asChild
@@ -272,7 +291,7 @@ export function FormationsDetail() {
                         </motion.div>
                     ))}
                 </div>
-            </div>
-        </section>
+            </div >
+        </section >
     )
 }

@@ -301,19 +301,19 @@ export default function ContactPage() {
                                 </div>
                             </div>
 
-                            {/* Map Placeholder */}
-                            <div className="rounded-2xl overflow-hidden h-[400px] border border-[#E7EBE9] bg-gradient-to-br from-[#E7EBE9] to-[#F9FAF9]">
-                                <div className="w-full h-full flex items-center justify-center">
-                                    <div className="text-center">
-                                        <MapPin className="w-16 h-16 text-[#47534E] mx-auto mb-4" />
-                                        <p className="text-[#47534E] font-semibold">
-                                            Carte Google Maps
-                                        </p>
-                                        <p className="text-sm text-[#47534E]/70 mt-2">
-                                            Intégration à venir
-                                        </p>
-                                    </div>
-                                </div>
+                            {/* Map */}
+                            <div className="rounded-2xl overflow-hidden h-[400px] border border-[#E7EBE9]">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102239.43143935326!2d2.9428788!3d36.7372827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb26977ea659f%3A0x128fb331e893c!2sAlger%2C%20Alg%C3%A9rie!5e0!3m2!1sfr!2sdz!4v1702569600000!5m2!1sfr!2sdz"
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    title="Incubia Algérie - Localisation"
+                                    className="w-full h-full"
+                                />
                             </div>
                         </div>
 

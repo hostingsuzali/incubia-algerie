@@ -62,8 +62,8 @@ const process = [
 const packages = [
     {
         name: "MVP Starter",
-        price: "À partir de 500 000 DA",
-        duration: "4-6 semaines",
+        price: "À partir de 200 000 DA",
+        duration: "1-4 semaines",
         ideal: "Validation d'idée",
         features: [
             "1-3 fonctionnalités core",
@@ -78,7 +78,7 @@ const packages = [
     },
     {
         name: "MVP Pro",
-        price: "À partir de 1 200 000 DA",
+        price: "À partir de 500 000 DA",
         duration: "6-8 semaines",
         ideal: "Lancement marché",
         popular: true,
@@ -96,7 +96,7 @@ const packages = [
     },
     {
         name: "Full Product",
-        price: "Sur devis",
+        price: "À partir de 1 200 000 DA",
         duration: "8-12 semaines",
         ideal: "Produit complet",
         features: [
@@ -115,20 +115,21 @@ const packages = [
 
 const successStories = [
     {
-        name: "HealthTech Startup",
-        result: "MVP lancé en 6 semaines, 1000+ utilisateurs en 2 mois",
-        tech: "React + Node.js + PostgreSQL",
+        name: "SuzaLink CRM",
+        result: "CRM B2B déployé, 4 équipes commerciales actives, +28% de taux de closing en 3 mois",
+        tech: "Next.js + NestJS + PostgreSQL",
     },
     {
-        name: "E-commerce Platform",
-        result: "Plateforme complète, 50K DA de CA le premier mois",
-        tech: "Next.js + Stripe + AWS",
+        name: "XIONYS Hotel System",
+        result: "Système de gestion hôtelière installé dans 3 hôtels, réduction de 35% du temps opérationnel",
+        tech: "React + Node.js + MySQ",
     },
     {
-        name: "EdTech App",
-        result: "App mobile + web, 5000 téléchargements en 1 mois",
-        tech: "React Native + Firebase",
-    },
+        name: "Sports AI App (Algérie)",
+        result: "Prototype IA fonctionnel, tests terrain avec 2 clubs et 1 200 utilisateurs enregistrés",
+        tech: "Python + React Native + Firebase",
+    }
+
 ]
 
 export default function MVPBuildingPage() {

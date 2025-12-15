@@ -1,4 +1,5 @@
 {
+  // Force reload tsconfig
   "compilerOptions": {
     "lib": [
       "dom",

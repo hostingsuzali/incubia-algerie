@@ -182,6 +182,70 @@ export default function FinancementPage() {
                 </div>
             </section>
 
+            {/* Pricing */}
+            <section className="py-20 bg-white">
+                <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold text-[#0D1F1A] mb-4">
+                            Nos Tarifs d'Accompagnement
+                        </h2>
+                        <p className="text-lg text-[#47534E] max-w-2xl mx-auto">
+                            Investissement pour maximiser vos chances d'obtenir un financement
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <div className="p-8 rounded-2xl border-2 border-[#E7EBE9] hover:border-[#059669] hover:shadow-xl transition-all">
+                            <h3 className="text-2xl font-bold text-[#0D1F1A] mb-2">Accompagnement Premium</h3>
+                            <div className="mb-6">
+                                <span className="text-3xl font-bold text-[#059669]">200 000 - 350 000 DZD</span>
+                            </div>
+                            <ul className="space-y-3 mb-6">
+                                <li className="flex items-start gap-3">
+                                    <Check className="w-5 h-5 text-[#059669] shrink-0 mt-0.5" />
+                                    <span className="text-sm text-[#47534E]">Montage dossier & Business Plan expert</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <Check className="w-5 h-5 text-[#059669] shrink-0 mt-0.5" />
+                                    <span className="text-sm text-[#47534E]">Coaching soutenance commission</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <Check className="w-5 h-5 text-[#059669] shrink-0 mt-0.5" />
+                                    <span className="text-sm text-[#47534E]">Suivi bancaire VIP jusqu'au déblocage</span>
+                                </li>
+                            </ul>
+                            <Button className="w-full bg-gradient-to-r from-[#059669] to-[#10B981]" asChild>
+                                <Link href="/contact">Démarrer l'Accompagnement</Link>
+                            </Button>
+                        </div>
+
+                        <div className="p-8 rounded-2xl border-2 border-[#E7EBE9] hover:border-[#059669] hover:shadow-xl transition-all">
+                            <h3 className="text-2xl font-bold text-[#0D1F1A] mb-2">Diagnostic Éligibilité</h3>
+                            <div className="mb-6">
+                                <span className="text-3xl font-bold text-[#059669]">30 000 DZD</span>
+                            </div>
+                            <ul className="space-y-3 mb-6">
+                                <li className="flex items-start gap-3">
+                                    <Check className="w-5 h-5 text-[#059669] shrink-0 mt-0.5" />
+                                    <span className="text-sm text-[#47534E]">Évaluation de l'éligibilité</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <Check className="w-5 h-5 text-[#059669] shrink-0 mt-0.5" />
+                                    <span className="text-sm text-[#47534E]">Recommandations personnalisées</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <Check className="w-5 h-5 text-[#059669] shrink-0 mt-0.5" />
+                                    <span className="text-sm text-[#47534E]">Plan d'action détaillé</span>
+                                </li>
+                            </ul>
+                            <Button className="w-full bg-gradient-to-r from-[#059669] to-[#10B981]" asChild>
+                                <Link href="/contact">Demander un Diagnostic</Link>
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* FAQ */}
             <section className="py-20 bg-white">
                 <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">

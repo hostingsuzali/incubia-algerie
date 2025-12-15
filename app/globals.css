@@ -9,7 +9,7 @@
   --c-primary-mint: #cdd2ed;
   --c-primary-dark-mint: #97aad2;
   --c-primary-deep: #0825a3;
-  --c-accent: #F4C06B;
+  --c-accent: #eff3fc;
   --c-text-primary: #0D1F1A;
   --c-text-secondary: #47534E;
   --c-border-neutral: #E7EBE9;
@@ -50,16 +50,26 @@
   --space-3xl: 64px;
 
   /* Typography Scale */
-  --fs-h1: 3rem; /* 48px */
-  --lh-h1: 3.5rem; /* 56px */
-  --fs-h2: 1.75rem; /* 28px */
-  --lh-h2: 2.25rem; /* 36px */
-  --fs-h3: 1.25rem; /* 20px */
-  --lh-h3: 1.75rem; /* 28px */
-  --fs-body: 1rem; /* 16px */
-  --lh-body: 1.5rem; /* 24px */
-  --fs-sm: 0.875rem; /* 14px */
-  --lh-sm: 1.25rem; /* 20px */
+  --fs-h1: 3rem;
+  /* 48px */
+  --lh-h1: 3.5rem;
+  /* 56px */
+  --fs-h2: 1.75rem;
+  /* 28px */
+  --lh-h2: 2.25rem;
+  /* 36px */
+  --fs-h3: 1.25rem;
+  /* 20px */
+  --lh-h3: 1.75rem;
+  /* 28px */
+  --fs-body: 1rem;
+  /* 16px */
+  --lh-body: 1.5rem;
+  /* 24px */
+  --fs-sm: 0.875rem;
+  /* 14px */
+  --lh-sm: 1.25rem;
+  /* 20px */
 
   /* Border Radius */
   --r-xs: 6px;
@@ -184,9 +194,11 @@
   html {
     scroll-behavior: smooth;
   }
+
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground tracking-tight;
   }

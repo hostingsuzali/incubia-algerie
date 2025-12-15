@@ -82,7 +82,7 @@ const modules = [
 const pricingTiers = [
     {
         name: "SaaS Starter",
-        price: "2 500 000 DA",
+        price: "3 000 000 DA",
         duration: "10-12 semaines",
         features: [
             "Authentification & users",
@@ -98,7 +98,7 @@ const pricingTiers = [
     },
     {
         name: "SaaS Pro",
-        price: "5 000 000 DA",
+        price: "6 000 000 DA",
         duration: "12-16 semaines",
         popular: true,
         features: [
@@ -206,9 +206,9 @@ export default function SaaSPlatformPage() {
                                     className="p-6 rounded-2xl bg-gradient-to-br from-white to-[#F9FAF9] border border-[#E7EBE9] hover:shadow-xl transition-all hover:-translate-y-1"
                                 >
                                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${index === 0 ? "from-[#CA9BFA] to-[#E9D5FF]" :
-                                            index === 1 ? "from-[#1B1AFE] to-[#4B4AFF]" :
-                                                index === 2 ? "from-[#0284C7] to-[#0EA5E9]" :
-                                                    "from-[#059669] to-[#10B981]"
+                                        index === 1 ? "from-[#1B1AFE] to-[#4B4AFF]" :
+                                            index === 2 ? "from-[#0284C7] to-[#0EA5E9]" :
+                                                "from-[#059669] to-[#10B981]"
                                         } flex items-center justify-center mb-4`}>
                                         <feature.icon className="w-6 h-6 text-white" />
                                     </div>
@@ -350,8 +350,8 @@ export default function SaaSPlatformPage() {
 
                                 <Button
                                     className={`w-full ${tier.popular
-                                            ? "bg-gradient-to-r from-[#1B1AFE] to-[#4B4AFF]"
-                                            : "bg-[#0D1F1A]"
+                                        ? "bg-gradient-to-r from-[#1B1AFE] to-[#4B4AFF]"
+                                        : "bg-[#0D1F1A]"
                                         }`}
                                     size="lg"
                                     asChild

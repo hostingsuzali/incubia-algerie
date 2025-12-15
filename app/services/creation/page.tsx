@@ -47,33 +47,33 @@ const steps = [
 const pricingTiers = [
     {
         name: "EURL/SARL",
-        price: "Sur devis",
+        price: "90 000 - 120 000 DZD",
         features: [
-            "Rédaction des statuts",
-            "Enregistrement CNRC",
-            "Obtention NIF",
-            "Assistance post-création (3 mois)",
+            "Rédaction des statuts sur-mesure",
+            "Enregistrement CNRC & Fiscalité",
+            "Convention siège social & domiciliation",
+            "Consultation juridique illimitée (3 mois)",
         ],
     },
     {
         name: "SPA",
-        price: "Sur devis",
+        price: "130 000 - 150 000 DZD",
         popular: true,
         features: [
             "Tout de l'EURL/SARL",
-            "Publication au BOAL",
-            "Assistance levée de fonds",
-            "Assistance post-création (6 mois)",
+            "Pacte d'actionnaires",
+            "Assistance bancaire VIP",
+            "Accompagnement post-création (6 mois)",
         ],
     },
     {
-        name: "Auto-Entrepreneur",
-        price: "Sur devis",
+        name: "Pack Auto-Entrepreneur",
+        price: "40 000 DZD",
         features: [
-            "Inscription simplifiée",
-            "Obtention registre",
-            "Formation fiscale",
-            "Support 1 mois",
+            "Gestion complète du dossier",
+            "Obtention carte & registre",
+            "Formation gestion & fiscalité (1 journée)",
+            "Accès coworking (1 semaine offerte)",
         ],
     },
 ]

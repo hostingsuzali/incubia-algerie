@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
 import Image from "next/image"
-import { Star, Award, Users } from "lucide-react"
+import { Award } from "lucide-react"
 
 export function NetworkSection() {
     const ref = useRef(null)
@@ -12,28 +12,25 @@ export function NetworkSection() {
 
     const mentors = [
         {
-            name: "Karim Benali",
-            role: "Ex-CEO TechCorp",
-            expertise: "SaaS & Scaling",
+            name: "Hichem Hammouche",
+            role: "Expert Commercial B2B",
+            expertise: "Vente B2B en Algérie",
             image: "/professional-young-algerian-man-portrait.jpg",
-            sessions: 45,
-            rating: 4.9,
+            focus: "Prospection & closing",
         },
         {
-            name: "Amira Hadj",
-            role: "Founder EduTech DZ",
-            expertise: "EdTech & Product",
+            name: "Radia Diffalah",
+            role: "Experte Incubation",
+            expertise: "Financement ANSEJ/CNAC",
             image: "/professional-algerian-woman-portrait.jpg",
-            sessions: 38,
-            rating: 4.8,
+            focus: "Dossiers de financement",
         },
         {
-            name: "Youcef Mansouri",
-            role: "Co-founder AgroTech",
-            expertise: "Agritech & Innovation",
+            name: "Alexandre Mellal",
+            role: "Expert Événementiel",
+            expertise: "Pitch & Communication",
             image: "/professional-algerian-businessman-portrait.jpg",
-            sessions: 52,
-            rating: 4.9,
+            focus: "Présentation investisseurs",
         },
     ]
 
@@ -47,15 +44,15 @@ export function NetworkSection() {
                     className="text-center max-w-4xl mx-auto mb-20"
                 >
                     <span className="inline-block py-2 px-4 rounded-full bg-[#1B1AFE]/10 text-[#1B1AFE] font-semibold text-sm mb-6">
-                        Notre Réseau d'Excellence
+                        Mentors Actifs
                     </span>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0D1F1A] tracking-tight mb-6 text-balance">
-                        Le Réseau le Plus Puissant{" "}
-                        <span className="text-[#1B1AFE]">à Votre Service</span>
+                        Des Opérateurs Qui Connaissent{" "}
+                        <span className="text-[#1B1AFE]">le Terrain Algérien</span>
                     </h2>
                     <p className="text-lg md:text-xl text-[#47534E] leading-relaxed max-w-3xl mx-auto">
-                        La réussite de votre startup dépend de l'expertise qui vous entoure. Accédez à un réseau exclusif de{" "}
-                        <strong className="text-[#1B1AFE]">plus de 100 mentors certifiés</strong> et d'experts métier, prêts à partager leur expérience et vous guider à chaque étape critique.
+                        Pas de théorie. Des mentors qui ont créé, vendu, levé des fonds et structuré des entreprises en Algérie. Ils vous aident à{" "}
+                        <strong className="text-[#1B1AFE]">éviter les erreurs coûteuses</strong> et accélérer votre exécution.
                     </p>
                 </motion.div>
 
@@ -93,17 +90,11 @@ export function NetworkSection() {
                                         {mentor.expertise}
                                     </div>
 
-                                    {/* Stats */}
-                                    <div className="flex items-center justify-center gap-4 pt-4 border-t border-[#E7EBE9]">
-                                        <div className="flex items-center gap-1">
-                                            <Star className="w-4 h-4 text-[#CA9BFA] fill-[#CA9BFA]" />
-                                            <span className="text-sm font-semibold text-[#0D1F1A]">{mentor.rating}</span>
-                                        </div>
-                                        <span className="text-[#47534E] text-xs">•</span>
-                                        <div className="flex items-center gap-1">
-                                            <Users className="w-4 h-4 text-[#1B1AFE]" />
-                                            <span className="text-sm text-[#47534E]">{mentor.sessions} sessions</span>
-                                        </div>
+                                    {/* Focus Area */}
+                                    <div className="pt-4 border-t border-[#E7EBE9]">
+                                        <p className="text-sm text-[#47534E]">
+                                            <strong className="text-[#0D1F1A]">Focus:</strong> {mentor.focus}
+                                        </p>
                                     </div>
                                 </div>
 
@@ -122,10 +113,10 @@ export function NetworkSection() {
                     className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto"
                 >
                     {[
-                        { value: "100+", label: "Mentors Certifiés" },
-                        { value: "500+", label: "Sessions Réalisées" },
-                        { value: "4.9/5", label: "Satisfaction Moyenne" },
-                        { value: "15+", label: "Secteurs Couverts" },
+                        { value: "20+", label: "Mentors Actifs" },
+                        { value: "Terrain", label: "Approche Pratique" },
+                        { value: "Algérie", label: "Contexte Local" },
+                        { value: "Résultats", label: "Orientation Action" },
                     ].map((stat, index) => (
                         <div key={index} className="text-center p-6 rounded-2xl bg-gradient-to-br from-[#F9FAF9] to-white border border-[#E7EBE9]">
                             <div className="text-3xl md:text-4xl font-bold text-[#1B1AFE] mb-2">{stat.value}</div>

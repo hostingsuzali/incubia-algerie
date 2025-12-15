@@ -187,7 +187,7 @@ export default function RessourcesPage() {
             </section>
 
             {/* Newsletter CTA */}
-            <section className="py-20 bg-white">
+            <section id="newsletter" className="py-20 bg-white scroll-mt-20">
                 <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
                     <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#CA9BFA] via-[#E9D5FF] to-[#1B1AFE] p-12 lg:p-16 text-white">
                         {/* Background decoration */}

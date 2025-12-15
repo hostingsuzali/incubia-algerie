@@ -11,11 +11,11 @@ export function HeroSection() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/product-development-team.png"
+          src="/incbuiaback.png"
           alt="Équipe Incuba-DZ"
           className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0D1F1A]/80 via-[#0D1F1A]/70 to-[#0D1F1A]/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0D1F1A]/50 via-[#0D1F1A]/40 to-[#0D1F1A]/60" />
       </div>
 
       {/* Animated Orbs */}
@@ -55,7 +55,7 @@ export function HeroSection() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium mb-8"
           >
             <Sparkles className="w-4 h-4 text-[#CA9BFA]" />
-            <span>L'Écosystème Entrepreneurial de Référence en Algérie</span>
+            <span>Incubateur Opérationnel en Algérie</span>
           </motion.div>
 
           {/* Main Heading */}
@@ -65,11 +65,11 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-[48px] md:text-[64px] lg:text-[80px] font-bold text-white leading-[1.05] text-balance tracking-[-0.04em] mb-6"
           >
-            L'Écosystème qui Transforme{" "}
+            Lancer en Algérie{" "}
             <span className="bg-gradient-to-r from-[#1B1AFE] via-[#CA9BFA] to-[#1B1AFE] bg-clip-text text-transparent">
-              Votre Vision
+              est Complexe
             </span>{" "}
-            en Réalité
+            — Nous Réduisons les Erreurs
           </motion.h1>
 
           {/* Subtitle */}
@@ -79,7 +79,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-[18px] md:text-[22px] text-white/90 leading-[1.6] tracking-[-0.01em] mb-12 max-w-[800px] mx-auto"
           >
-            <strong>Incuba-DZ</strong> : Accompagnement expert, financement, réseau puissant et formations stratégiques pour la réussite de votre projet en Algérie.
+            Structuration juridique, financement local, vente B2B, organisation interne. <strong>Incubia</strong> vous accompagne sur les blocages réels de l'entrepreneuriat en Algérie.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -95,7 +95,7 @@ export function HeroSection() {
               asChild
             >
               <Link href="/postuler">
-                Je Lance Mon Projet
+                Évaluer Mon Projet
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
@@ -105,7 +105,7 @@ export function HeroSection() {
               asChild
             >
               <Link href="/formations">
-                Découvrir Nos Formations
+                Voir Programmes & Prix
               </Link>
             </Button>
           </motion.div>
@@ -119,15 +119,15 @@ export function HeroSection() {
           >
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-[#CA9BFA]" />
-              <span>100+ Mentors Certifiés</span>
+              <span>Mentors Opérationnels</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-[#1B1AFE]" />
-              <span>30+ Formations Disponibles</span>
+              <span>Formations Pratiques</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-400" />
-              <span>Résultats Prouvés</span>
+              <span>Accompagnement Terrain</span>
             </div>
           </motion.div>
         </div>

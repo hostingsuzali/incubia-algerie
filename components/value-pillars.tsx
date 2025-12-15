@@ -30,30 +30,30 @@ export function ValuePillars() {
 
   const pillars = [
     {
-      icon: Compass,
-      title: "Accompagnement stratégique",
-      description: "Conseils opérationnels & roadmap business",
-      benefit: "Validez votre modèle économique et structurez votre croissance avec un plan d'action concret.",
-      cta: "Explorer",
-      href: "/services/accompagnement",
+      icon: Briefcase,
+      title: "Structuration Juridique & Administrative",
+      description: "Création d'entreprise, conformité, Label Startup",
+      benefit: "Évitez les blocages administratifs et structurez votre entreprise correctement dès le départ.",
+      cta: "Voir les services",
+      href: "/services/creation",
       bgColor: "#F2E8FF",
     },
     {
-      icon: Users,
-      title: "Réseau d'experts & mentors",
-      description: "50+ mentors sélectionnés",
-      benefit: "Bénéficiez de l'expertise de dirigeants et entrepreneurs qui ont réussi en Algérie.",
-      cta: "Découvrir les mentors",
-      href: "/equipe#mentors",
+      icon: Compass,
+      title: "Financement Réel (ANSEJ, Dispositifs Locaux)",
+      description: "Constitution de dossiers, accompagnement terrain",
+      benefit: "Maximisez vos chances d'obtenir un financement avec des dossiers montés par des experts du système algérien.",
+      cta: "Découvrir l'accompagnement",
+      href: "/services/financement",
       bgColor: "#EEF1FF",
     },
     {
-      icon: Briefcase,
-      title: "Outils & services",
-      description: "modèles, accès à partenaires financiers",
-      benefit: "Accédez à des templates prêts à l'emploi et à notre réseau de financeurs et partenaires.",
-      cta: "Voir la toolbox",
-      href: "/services",
+      icon: Users,
+      title: "Vente B2B en Algérie",
+      description: "Stratégie commerciale, prospection, partenariats",
+      benefit: "Apprenez à vendre en B2B dans le contexte algérien avec des mentors qui maîtrisent le terrain.",
+      cta: "Voir les formations",
+      href: "/formations",
       bgColor: "#E6F3E9",
     },
   ]
@@ -61,10 +61,9 @@ export function ValuePillars() {
   return (
     <section ref={sectionRef} className="py-24 bg-[#FFFFFF] overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
-        <div 
-          className={`text-center max-w-4xl mx-auto mb-16 transition-all duration-500 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-          }`}
+        <div
+          className={`text-center max-w-4xl mx-auto mb-16 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+            }`}
         >
           <h2 className="text-3xl lg:text-5xl font-bold text-[#0D1F1A] text-balance">
             Pourquoi Incubia ?
@@ -75,11 +74,10 @@ export function ValuePillars() {
           {pillars.map((pillar, index) => (
             <Card
               key={index}
-              className={`group relative overflow-hidden border border-[rgba(151,210,199,0.06)] shadow-[0_6px_18px_rgba(12,97,88,0.06)] hover:shadow-[0_12px_36px_rgba(12,97,88,0.08)] transition-all duration-320 hover:-translate-y-1 rounded-[24px] flex flex-col ${
-                isVisible
+              className={`group relative overflow-hidden border border-[rgba(151,210,199,0.06)] shadow-[0_6px_18px_rgba(12,97,88,0.06)] hover:shadow-[0_12px_36px_rgba(12,97,88,0.08)] transition-all duration-320 hover:-translate-y-1 rounded-[24px] flex flex-col ${isVisible
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-6 scale-[0.98]"
-              }`}
+                }`}
               style={{
                 backgroundColor: pillar.bgColor,
                 transition: 'all 450ms cubic-bezier(0.22, 1, 0.36, 1)',

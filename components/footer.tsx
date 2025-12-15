@@ -41,16 +41,15 @@ export function Footer() {
   }
 
   const socials = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Facebook, href: "https://facebook.com/incubadz", label: "Facebook" },
+    { icon: Linkedin, href: "https://linkedin.com/company/incubadz", label: "LinkedIn" },
+    { icon: Instagram, href: "https://instagram.com/incubadz", label: "Instagram" },
   ]
 
   const stats = [
-    { icon: Award, value: "100+", label: "Mentors Certifiés" },
-    { icon: Sparkles, value: "30+", label: "Formations" },
-    { icon: TrendingUp, value: "24+", label: "Startups Accompagnées" },
+    { icon: Award, value: "20+", label: "Mentors Certifiés" },
+    { icon: Sparkles, value: "10+", label: "Formations" },
+    { icon: TrendingUp, value: "+16", label: "Projets Accompagnées" },
   ]
 
   return (
@@ -89,7 +88,7 @@ export function Footer() {
               <Link href="/" className="inline-block mb-6">
                 <Image
                   src="/logoincubia.svg"
-                  alt="Incuba-DZ Logo"
+                  alt="Incubia-algerie Logo"
                   width={160}
                   height={35}
                   className="h-10 w-auto brightness-0 invert"
@@ -101,23 +100,23 @@ export function Footer() {
 
               {/* Contact Info */}
               <div className="space-y-3 mb-8">
-                <a href="mailto:contact@incuba-dz.com" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group">
+                <a href="mailto:contact@incubia-algerie.com" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group">
                   <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
                     <Mail className="w-5 h-5" />
                   </div>
                   <span className="text-sm">contact@incuba-dz.com</span>
                 </a>
-                <a href="tel:+213XXXXXXXXX" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group">
+                <a href="tel:+213542999301" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group">
                   <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
                     <Phone className="w-5 h-5" />
                   </div>
-                  <span className="text-sm">+213 XX XX XX XX</span>
+                  <span className="text-sm">+213 542 99 93 01</span>
                 </a>
                 <div className="flex items-start gap-3 text-white/70">
                   <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
-                  <span className="text-sm">Alger, Algérie</span>
+                  <span className="text-sm">Oran, Algérie</span>
                 </div>
               </div>
 
@@ -254,6 +253,8 @@ export function Footer() {
                 <Link
                   key={index}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={social.label}
                   className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center hover:bg-gradient-to-br hover:from-[#1B1AFE] hover:to-[#CA9BFA] transition-all group"
                 >

@@ -12,52 +12,54 @@ export function MentoratSection() {
 
     const mentors = [
         {
-            name: "Karim Benali",
-            role: "Ex-CEO TechCorp",
+            name: "Hichem Hammouche",
+            role: "Développement Commercial B2B",
             image: "/professional-young-algerian-man-portrait.jpg",
-            domains: ["Développement commercial", "Product-Market Fit", "Scaling"],
-            availability: "Programme Accélération",
+            domains: ["Prospection B2B", "Stratégie commerciale", "Closing"],
+            availability: "Mentorat individuel",
             icon: TrendingUp,
+            helps: "Structurer votre approche commerciale et acquérir vos premiers clients B2B",
+            forWho: "Startups B2B en phase de commercialisation",
         },
         {
-            name: "Amira Hadj",
-            role: "Founder EduTech DZ",
+            name: "Radia Diffalah",
+            role: "Incubation & Transformation Numérique",
             image: "/professional-algerian-woman-portrait.jpg",
-            domains: ["Produit", "User Growth", "Go-to-Market"],
-            availability: "Programme Incubation",
+            domains: ["Financement ANSEJ/CNAC", "Business Model", "Structuration"],
+            availability: "Programmes & mentorat",
             icon: Rocket,
+            helps: "Valider votre modèle et monter des dossiers de financement solides",
+            forWho: "Porteurs de projet en phase de validation",
         },
         {
-            name: "Youcef Mansouri",
-            role: "VP Sales AgroTech",
+            name: "Alexandre Mellal",
+            role: "Événementiel & Pitching",
             image: "/professional-algerian-businessman-portrait.jpg",
-            domains: ["Vente B2B", "Stratégie commerciale", "Partenariats"],
-            availability: "À la demande",
-            icon: Target,
-        },
-        {
-            name: "Mehdi Larbi",
-            role: "Angel Investor",
-            image: "/professional-young-algerian-man-portrait.jpg",
-            domains: ["Financement", "Pitch", "Due Diligence"],
-            availability: "Programme Growth",
-            icon: DollarSign,
-        },
-        {
-            name: "Sarah Khelifi",
-            role: "COO Scale-up",
-            image: "/professional-algerian-woman-portrait.jpg",
-            domains: ["Management", "Organisation", "Process"],
-            availability: "Tous programmes",
-            icon: Users,
-        },
-        {
-            name: "Farid Bouazza",
-            role: "Avocat d'Affaires",
-            image: "/professional-algerian-businessman-portrait.jpg",
-            domains: ["Juridique", "Label Startup", "Compliance"],
-            availability: "À la demande",
+            domains: ["Pitch", "Présentation", "Communication"],
+            availability: "Formations & coaching",
             icon: Megaphone,
+            helps: "Pitcher efficacement devant investisseurs, jury, ou partenaires",
+            forWho: "Fondateurs préparant concours ou levée",
+        },
+        {
+            name: "Amine Hallab",
+            role: "Management & Structuration",
+            image: "/professional-young-algerian-man-portrait.jpg",
+            domains: ["Organisation", "Process", "Management équipe"],
+            availability: "Mentorat individuel",
+            icon: Users,
+            helps: "Organiser votre équipe et mettre en place des process efficaces",
+            forWho: "Fondateurs gérant une équipe de 2-10 personnes",
+        },
+        {
+            name: "Mohamed Ben",
+            role: "Juridique & Comptabilité (Algérie)",
+            image: "/professional-algerian-businessman-portrait.jpg",
+            domains: ["Création entreprise", "Label Startup", "Conformité"],
+            availability: "Formations & conseil",
+            icon: DollarSign,
+            helps: "Créer votre structure juridique sans erreurs et obtenir le Label Startup",
+            forWho: "Porteurs de projet prêts à créer leur entreprise",
         },
     ]
 
@@ -172,14 +174,44 @@ export function MentoratSection() {
                                     </div>
                                 </div>
 
-                                {/* Availability */}
+                                {/* What they help with */}
+                                {mentor.helps && (
+                                    <div className="mb-3">
+                                        <p className="text-xs font-semibold text-[#47534E] mb-1">Ce qu'il vous aide à faire</p>
+                                        <p className="text-sm text-[#0D1F1A] leading-relaxed">{mentor.helps}</p>
+                                    </div>
+                                )}
+
+                                {/* For who */}
                                 <div className="pt-4 border-t border-[#E7EBE9]">
                                     <p className="text-xs text-[#47534E]">
-                                        <strong>Disponibilité:</strong> {mentor.availability}
+                                        <strong>Pour qui:</strong> {mentor.forWho || mentor.availability}
                                     </p>
                                 </div>
                             </motion.div>
                         ))}
+                    </div>
+
+                    {/* Mentorat Pricing */}
+                    <div className="mt-16 max-w-4xl mx-auto">
+                        <h3 className="text-2xl font-bold text-[#0D1F1A] mb-6 text-center">Tarifs Mentorat</h3>
+                        <div className="grid md:grid-cols-3 gap-6">
+                            <div className="p-6 rounded-2xl bg-white border-2 border-[#E7EBE9] hover:border-[#1B1AFE] transition-all">
+                                <p className="text-sm font-semibold text-[#47534E] mb-2">Session individuelle</p>
+                                <p className="text-3xl font-bold text-[#1B1AFE] mb-2">18 000 - 22 000 DZD</p>
+                                <p className="text-xs text-[#47534E]">1h30 avec un mentor</p>
+                            </div>
+                            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#1B1AFE]/5 to-[#CA9BFA]/5 border-2 border-[#1B1AFE] scale-105">
+                                <p className="text-sm font-semibold text-[#1B1AFE] mb-2">Pack 4 sessions</p>
+                                <p className="text-3xl font-bold text-[#1B1AFE] mb-2">~65 000 DZD</p>
+                                <p className="text-xs text-[#47534E]">Suivi sur 1 mois</p>
+                            </div>
+                            <div className="p-6 rounded-2xl bg-white border-2 border-[#E7EBE9] hover:border-[#1B1AFE] transition-all">
+                                <p className="text-sm font-semibold text-[#47534E] mb-2">Suivi mensuel</p>
+                                <p className="text-3xl font-bold text-[#1B1AFE] mb-2">50 000 - 60 000 DZD</p>
+                                <p className="text-xs text-[#47534E]">Accompagnement continu</p>
+                            </div>
+                        </div>
                     </div>
                 </motion.div>
             </div>

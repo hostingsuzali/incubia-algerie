@@ -46,37 +46,37 @@ const steps = [
 
 const pricingTiers = [
     {
-        name: "Starter",
-        price: "15 000 DA",
-        period: "/mois",
+        name: "Adresse Prestige",
+        price: "35 000 DA",
+        period: "/an",
         features: [
-            "Adresse légale",
-            "Réception du courrier",
-            "Scan des documents",
-            "Support par email",
+            "Adresse commerciale premium (Alger Centre)",
+            "Réception & notification courrier",
+            "Contrat de domiciliation notarié",
+            "Conformité fiscale garantie",
         ],
     },
     {
-        name: "Business",
-        price: "25 000 DA",
-        period: "/mois",
+        name: "Business Office",
+        price: "60 000 DA",
+        period: "/an",
         popular: true,
         features: [
-            "Tout du Starter",
-            "Salle de réunion (2h/mois)",
-            "Ligne téléphonique",
-            "Support prioritaire",
+            "Tout du Pack Prestige",
+            "Scan & envoi email du courrier",
+            "Salle de réunion (4h/mois)",
+            "Ligne fixe dédiée & répondeur",
         ],
     },
     {
-        name: "Premium",
-        price: "40 000 DA",
-        period: "/mois",
+        name: "Virtual HQ",
+        price: "90 000 DA",
+        period: "/an",
         features: [
-            "Tout du Business",
-            "Salle de réunion (5h/mois)",
-            "Espace coworking (3 jours/mois)",
-            "Secrétariat téléphonique",
+            "Tout du Pack Business",
+            "Gestion administrative complète",
+            "Salle de réunion illimitée (selon dispo)",
+            "Accès coworking (5 jours/mois)",
         ],
     },
 ]
@@ -209,8 +209,8 @@ export default function DomiciliationPage() {
                             <div
                                 key={index}
                                 className={`relative p-8 rounded-2xl border-2 transition-all ${tier.popular
-                                        ? "border-[#0284C7] shadow-xl scale-105"
-                                        : "border-[#E7EBE9] hover:border-[#0284C7]"
+                                    ? "border-[#0284C7] shadow-xl scale-105"
+                                    : "border-[#E7EBE9] hover:border-[#0284C7]"
                                     }`}
                             >
                                 {tier.popular && (
@@ -235,8 +235,8 @@ export default function DomiciliationPage() {
                                 </ul>
                                 <Button
                                     className={`w-full ${tier.popular
-                                            ? "bg-gradient-to-r from-[#0284C7] to-[#0EA5E9]"
-                                            : "bg-[#0D1F1A]"
+                                        ? "bg-gradient-to-r from-[#0284C7] to-[#0EA5E9]"
+                                        : "bg-[#0D1F1A]"
                                         }`}
                                     asChild
                                 >

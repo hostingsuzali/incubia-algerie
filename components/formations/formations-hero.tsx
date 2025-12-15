@@ -24,19 +24,19 @@ export function FormationsHero() {
                     {/* Badge */}
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#CA9BFA]/10 to-[#E9D5FF]/10 border border-[#CA9BFA]/20 text-[#1B1AFE] font-semibold text-sm mb-8">
                         <Award className="w-4 h-4" />
-                        Formations animées par des praticiens de l'écosystème entrepreneurial
+                        Formations animées par des praticiens actifs de l'écosystème algérien
                     </div>
 
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#0D1F1A] tracking-tight mb-8 text-balance">
-                        Développez les Compétences Clés pour{" "}
+                        Résolvez les Blocages Réels pour{" "}
                         <span className="bg-gradient-to-r from-[#CA9BFA] to-[#E9D5FF] bg-clip-text text-transparent">
-                            Lancer, Structurer
+                            Lancer, Financer
                         </span>{" "}
-                        et Développer Votre Startup
+                        et Développer en Algérie
                     </h1>
 
                     <p className="text-xl md:text-2xl text-[#47534E] leading-relaxed max-w-4xl mx-auto mb-12">
-                        Des formations pratiques et un mentorat ciblé en business, management et exécution terrain, adaptés à chaque stade de votre projet.
+                        Formations pratiques et mentorat ciblé sur les défis concrets de l'entrepreneuriat algérien : création, financement, vente B2B, structuration.
                     </p>
 
                     {/* CTAs */}
@@ -67,9 +67,9 @@ export function FormationsHero() {
                     {/* Stats */}
                     <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
                         {[
-                            { value: "30+", label: "Formations disponibles" },
-                            { value: "50+", label: "Mentors experts" },
-                            { value: "500+", label: "Entrepreneurs formés" },
+                            { value: "15+", label: "Formations disponibles" },
+                            { value: "20+", label: "Mentors actifs" },
+                            { value: "Terrain", label: "Approche pratique" },
                         ].map((stat, index) => (
                             <motion.div
                                 key={index}
