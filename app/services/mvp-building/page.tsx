@@ -118,18 +118,7 @@ const successStories = [
         name: "SuzaLink CRM",
         result: "CRM B2B déployé, 4 équipes commerciales actives, +28% de taux de closing en 3 mois",
         tech: "Next.js + NestJS + PostgreSQL",
-    },
-    {
-        name: "XIONYS Hotel System",
-        result: "Système de gestion hôtelière installé dans 3 hôtels, réduction de 35% du temps opérationnel",
-        tech: "React + Node.js + MySQ",
-    },
-    {
-        name: "Sports AI App (Algérie)",
-        result: "Prototype IA fonctionnel, tests terrain avec 2 clubs et 1 200 utilisateurs enregistrés",
-        tech: "Python + React Native + Firebase",
     }
-
 ]
 
 export default function MVPBuildingPage() {

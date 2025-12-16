@@ -1,73 +1,14 @@
 "use client"
-
-import { useState, useEffect } from "react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, Quote, TrendingUp, Users, Banknote, Star } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
+import { Quote, TrendingUp, Users, Banknote, Star } from "lucide-react"
+import { motion } from "framer-motion"
 
 export function SuccessStories() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [direction, setDirection] = useState(0)
-
-  const testimonials = [
-    {
-      quote:
-        "Incubia nous a permis de structurer notre projet et d'obtenir notre financement ANSEJ en seulement 3 mois. L'accompagnement personnalisé a fait toute la différence.",
-      author: "Karim Benali",
-      role: "Fondateur, TechDZ",
-      image: "/professional-young-algerian-man-portrait.jpg",
-      metrics: { ca: "150K€", levee: "50K€", impact: "+400% croissance" },
-    },
-    {
-      quote:
-        "Le réseau de mentors d'Incubia m'a ouvert des portes que je n'aurais jamais pu ouvrir seule. Aujourd'hui, ma startup emploie 15 personnes.",
-      author: "Amira Hadj",
-      role: "CEO, EduAlgérie",
-      image: "/professional-algerian-woman-portrait.jpg",
-      metrics: { ca: "300K€", levee: "200K€", impact: "15 employés" },
-    },
-    {
-      quote:
-        "De l'idée à la levée de fonds, chaque étape a été accompagnée par des experts qui comprennent vraiment le marché algérien.",
-      author: "Youcef Mansouri",
-      role: "Co-fondateur, AgroTech",
-      image: "/professional-algerian-businessman-portrait.jpg",
-      metrics: { ca: "500K€", levee: "300K€", impact: "2M DZD levés" },
-    },
-  ]
-
-  const nextSlide = () => {
-    setDirection(1)
-    setCurrentSlide((prev) => (prev + 1) % testimonials.length)
-  }
-
-  const prevSlide = () => {
-    setDirection(-1)
-    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
-
-  // Auto-play
-  useEffect(() => {
-    const timer = setInterval(() => {
-      nextSlide()
-    }, 6000)
-    return () => clearInterval(timer)
-  }, [currentSlide])
-
-  const slideVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-    },
-    exit: (direction: number) => ({
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0,
-    }),
+  const story = {
+    quote:
+      "Incubia a transformé notre vision en une entreprise structurée. Grâce à leur accompagnement, nous avons validé notre marché, signé nos premiers clients B2B et sécurisé un financement en seulement 4 mois.",
+    author: "Riad B.",
+    role: "CEO, SuzaLink",
+    metrics: { ca: "+200% Croissance", levee: "Financement Sécurisé", impact: "4 Grands Comptes" },
   }
 
   return (
@@ -86,7 +27,7 @@ export function SuccessStories() {
             viewport={{ once: true }}
             className="inline-block py-2 px-4 rounded-full bg-white/10 backdrop-blur-sm text-white font-semibold text-sm mb-6"
           >
-            Success Stories
+            Success Story
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -104,112 +45,51 @@ export function SuccessStories() {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-white/70 leading-relaxed"
           >
-            Des entrepreneurs algériens qui ont transformé leurs idées en success stories
+            Exemple concret d'une startup accompagnée qui performe sur le marché
           </motion.p>
         </div>
 
-        {/* Testimonial Carousel */}
-        <div className="relative max-w-6xl mx-auto mb-12">
-          <div className="relative overflow-hidden rounded-[32px]">
-            <AnimatePresence initial={false} custom={direction} mode="wait">
-              <motion.div
-                key={currentSlide}
-                custom={direction}
-                variants={slideVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "spring", stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.2 },
-                }}
-                className="relative"
-              >
-                <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[32px] p-8 md:p-12">
-                  <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Left: Quote */}
-                    <div className="space-y-8">
-                      <Quote className="w-16 h-16 text-[#CA9BFA]/40" />
-                      <blockquote className="text-2xl md:text-3xl text-white leading-relaxed font-medium">
-                        "{testimonials[currentSlide].quote}"
-                      </blockquote>
+        {/* Single Testimonial Card */}
+        <div className="relative max-w-5xl mx-auto mb-12">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[32px] p-8 md:p-12 text-center">
+              <Quote className="w-16 h-16 text-[#CA9BFA]/40 mx-auto mb-8" />
+              <blockquote className="text-2xl md:text-4xl text-white leading-relaxed font-medium mb-12 max-w-4xl mx-auto">
+                "{story.quote}"
+              </blockquote>
 
-                      {/* Author */}
-                      <div className="flex items-center gap-4">
-                        <img
-                          src={testimonials[currentSlide].image}
-                          alt={testimonials[currentSlide].author}
-                          className="w-16 h-16 rounded-full object-cover ring-4 ring-white/10"
-                        />
-                        <div>
-                          <p className="font-bold text-white text-lg">{testimonials[currentSlide].author}</p>
-                          <p className="text-white/60">{testimonials[currentSlide].role}</p>
-                        </div>
-                      </div>
-
-                      {/* Metrics badges */}
-                      <div className="flex flex-wrap gap-3">
-                        <div className="px-4 py-2 rounded-full bg-[#1B1AFE]/20 backdrop-blur-sm border border-[#1B1AFE]/30 text-white font-semibold text-sm">
-                          CA: {testimonials[currentSlide].metrics.ca}
-                        </div>
-                        <div className="px-4 py-2 rounded-full bg-[#CA9BFA]/20 backdrop-blur-sm border border-[#CA9BFA]/30 text-white font-semibold text-sm">
-                          Levée: {testimonials[currentSlide].metrics.levee}
-                        </div>
-                        <div className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold text-sm">
-                          {testimonials[currentSlide].metrics.impact}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Right: Image */}
-                    <div className="relative h-[400px] rounded-2xl overflow-hidden">
-                      <img
-                        src="/successful-startup-team-celebrating-in-modern-alge.jpg"
-                        alt="Success story"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0D1F1A]/60 to-transparent" />
-                    </div>
-                  </div>
+              <div className="flex flex-col items-center gap-2 mb-10">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#1B1AFE] to-[#CA9BFA] flex items-center justify-center text-2xl font-bold text-white mb-2">
+                  {story.author.charAt(0)}
                 </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
+                <div>
+                  <p className="font-bold text-white text-xl">{story.author}</p>
+                  <p className="text-white/60">{story.role}</p>
+                </div>
+              </div>
 
-          {/* Navigation */}
-          <div className="flex items-center justify-center gap-6 mt-8">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={prevSlide}
-              className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-sm"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </Button>
-
-            <div className="flex gap-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    setDirection(index > currentSlide ? 1 : -1)
-                    setCurrentSlide(index)
-                  }}
-                  className={`h-2 rounded-full transition-all ${index === currentSlide ? "bg-white w-8" : "bg-white/30 w-2"
-                    }`}
-                />
-              ))}
+              {/* Metrics badges */}
+              <div className="flex flex-wrap justify-center gap-4">
+                <div className="px-6 py-3 rounded-full bg-[#1B1AFE]/20 backdrop-blur-sm border border-[#1B1AFE]/30 text-white font-semibold flex items-center gap-2">
+                  <TrendingUp className="w-4 h-4" />
+                  {story.metrics.ca}
+                </div>
+                <div className="px-6 py-3 rounded-full bg-[#CA9BFA]/20 backdrop-blur-sm border border-[#CA9BFA]/30 text-white font-semibold flex items-center gap-2">
+                  <Banknote className="w-4 h-4" />
+                  {story.metrics.levee}
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold flex items-center gap-2">
+                  <Users className="w-4 h-4" />
+                  {story.metrics.impact}
+                </div>
+              </div>
             </div>
-
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={nextSlide}
-              className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-sm"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </Button>
-          </div>
+          </motion.div>
         </div>
 
         {/* Stats Grid */}
@@ -220,10 +100,10 @@ export function SuccessStories() {
           className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto"
         >
           {[
-            { icon: Users, value: "24+", label: "Startups accompagnées" },
-            { icon: Banknote, value: "1.2M€", label: "Levées totales" },
-            { icon: TrendingUp, value: "16", label: "Projets incubés" },
-            { icon: Star, value: "4.8/5", label: "Satisfaction" },
+            { icon: Users, value: "16+", label: "Startups accompagnées" },
+            { icon: Banknote, value: "85M", label: "DZD Levés (Total)" },
+            { icon: TrendingUp, value: "90%", label: "Taux de Survie" },
+            { icon: Star, value: "4.9/5", label: "Satisfaction" },
           ].map((stat, index) => (
             <motion.div
               key={index}
