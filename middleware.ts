@@ -64,6 +64,13 @@ export function middleware(request: VercelRequest) {
     const userAgent = headers.get('user-agent') || '';
     const country = geo?.country || 'UNKNOWN';
 
+    // DEBUG: Add headers to see what Vercel detects
+    const debugHeaders = {
+        'X-Debug-Country': country,
+        'X-Debug-Is-Bot': isSearchBot(userAgent) ? 'yes' : 'no',
+        'X-Geo-Country': country,
+    };
+
     // Block requests from specified countries FIRST (even if they're bots)
     // This prioritizes spam prevention over SEO for high-risk regions
     if (BLOCKED_COUNTRIES.includes(country)) {
@@ -71,6 +78,11 @@ export function middleware(request: VercelRequest) {
             JSON.stringify({
                 error: 'Forbidden',
                 message: 'Access denied from your region.',
+                debug: {
+                    country: country,
+                    isBot: isSearchBot(userAgent),
+                    blockedCountries: BLOCKED_COUNTRIES,
+                },
             }),
             {
                 status: 403,
@@ -78,25 +90,31 @@ export function middleware(request: VercelRequest) {
                     'Content-Type': 'application/json',
                     // Don't cache blocks (geo might be wrong or policies might change)
                     'Cache-Control': 'no-store, max-age=0',
-                    'X-Geo-Country': country,
+                    ...debugHeaders,
                     'X-Robots-Tag': 'noindex, nofollow',
                 },
             }
         );
     }
 
+
     // Allow search engine crawlers from other regions
     if (isSearchBot(userAgent)) {
         const response = NextResponse.next();
         response.headers.set('X-Geo-Allowed', 'bot');
+        response.headers.set('X-Debug-Country', country);
+        response.headers.set('X-Debug-Is-Bot', 'yes');
         return response;
     }
 
     // Allow all other traffic
     const response = NextResponse.next();
     response.headers.set('X-Geo-Country', country);
+    response.headers.set('X-Debug-Country', country);
+    response.headers.set('X-Debug-Is-Bot', 'no');
     return response;
 }
+
 
 
 // Run middleware on all routes except static assets
