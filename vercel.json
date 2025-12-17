@@ -1,0 +1,55 @@
+{
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "X-Content-Type-Options",
+                    "value": "nosniff"
+                },
+                {
+                    "key": "X-Frame-Options",
+                    "value": "DENY"
+                },
+                {
+                    "key": "X-XSS-Protection",
+                    "value": "1; mode=block"
+                }
+            ]
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/tarifs",
+            "destination": "/api/gone"
+        },
+        {
+            "source": "/tarifs/",
+            "destination": "/api/gone"
+        },
+        {
+            "source": "/actualites",
+            "destination": "/api/gone"
+        },
+        {
+            "source": "/actualites/",
+            "destination": "/api/gone"
+        },
+        {
+            "source": "/wp-:path*",
+            "destination": "/api/gone"
+        },
+        {
+            "source": "/wp-admin/:path*",
+            "destination": "/api/gone"
+        },
+        {
+            "source": "/wp-content/:path*",
+            "destination": "/api/gone"
+        },
+        {
+            "source": "/wp-includes/:path*",
+            "destination": "/api/gone"
+        }
+    ]
+}
