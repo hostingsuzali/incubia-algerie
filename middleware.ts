@@ -64,14 +64,8 @@ export function middleware(request: VercelRequest) {
     const userAgent = headers.get('user-agent') || '';
     const country = geo?.country || 'UNKNOWN';
 
-    // Always allow search engine crawlers (prevents cloaking penalties)
-    if (isSearchBot(userAgent)) {
-        const response = NextResponse.next();
-        response.headers.set('X-Geo-Allowed', 'bot');
-        return response;
-    }
-
-    // Block requests from specified countries
+    // Block requests from specified countries FIRST (even if they're bots)
+    // This prioritizes spam prevention over SEO for high-risk regions
     if (BLOCKED_COUNTRIES.includes(country)) {
         return new Response(
             JSON.stringify({
@@ -91,11 +85,19 @@ export function middleware(request: VercelRequest) {
         );
     }
 
+    // Allow search engine crawlers from other regions
+    if (isSearchBot(userAgent)) {
+        const response = NextResponse.next();
+        response.headers.set('X-Geo-Allowed', 'bot');
+        return response;
+    }
+
     // Allow all other traffic
     const response = NextResponse.next();
     response.headers.set('X-Geo-Country', country);
     return response;
 }
+
 
 // Run middleware on all routes except static assets
 export const config = {
